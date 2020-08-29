@@ -26,6 +26,7 @@
                                     <thead>
                                         <tr>
                                             <th>No.</th>
+                                            <th>Nama</th>
                                             <th>Ketua</th>
                                             <th>Alamat</th>
                                             <th>Foto</th>
@@ -36,6 +37,7 @@
                                     <tbody>
                                          <tr>
                                             <th>{{ $loop->iteration }}</th>
+                                            <th>{{ $b->nama }}</th>
                                             <th>{{ $b->ketua }}</th>
                                             <th>{{ $b->alamat }}</th>
                                             <th><img src="{{ asset('upload/foto/'.$b->foto)}}" alt="" width="100px"></th>
@@ -51,7 +53,7 @@
                                                                 <h4 class="modal-title">Hapus Lokasi</h4>
                                                             </div>
                                                                                                                         <div class="modal-body">
-                                                                Apakah anda yakin ingin menghapus {{$b->ketua}} ?
+                                                                Apakah anda yakin ingin menghapus {{$b->nama}} ?
                                                             </div>
                                                             <div class="modal-footer">
                                                                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>

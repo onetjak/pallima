@@ -5,7 +5,7 @@
 <section class="content">
         <div class="container-fluid">
             <div class="block-header">
-                <h2>BANTUAN</h2>
+                <h2>KATEGORI</h2>
             </div>
 
             <!-- Basic Examples -->
@@ -14,10 +14,10 @@
                     <div class="card">
                         <div class="header">
                             <h2>
-                                Penerima Bantuan Beras dan PKH
+                                Kategori Artikel
                             </h2>
                             <ul class="header-dropdown m-r--5">
-                                 <a class="btn btn-success" href="{{url('/form_kategori')}}" style="margin-bottom: 10px">+ Penerima</a>
+                                 <a class="btn btn-success" href="{{url('/form_kategori')}}" style="margin-bottom: 10px">+ Kategori</a>
                             </ul>
                         </div>
                         <div class="body">
@@ -46,10 +46,10 @@
                                                         <div class="modal-content">
                                                             <div class="modal-header">
                                                                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                                                                <h4 class="modal-title">Hapus Bantuan</h4>
+                                                                <h4 class="modal-title">Hapus Kategori</h4>
                                                             </div>
                                                                                                                         <div class="modal-body">
-                                                                Apakah anda yakin ingin menghapus bantuan dengan NIK {{$b->name}} ?
+                                                                Apakah anda yakin ingin menghapus Kategori{{$b->name}} ?
                                                             </div>
                                                             <div class="modal-footer">
                                                                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>

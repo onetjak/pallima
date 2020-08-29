@@ -115,15 +115,13 @@ class PostController extends Controller
         return redirect(route('post.index'));
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
+    public function hapus($id)
     {
-        //
+        $ft = Post::where('id', $id)->first();
+        $cover = public_path('upload/foto/' . $ft->cover);
+        File::delete($cover);
+        Post::destroy($id);
+        return redirect()->back();
     }
 
     public function ApiBerita()

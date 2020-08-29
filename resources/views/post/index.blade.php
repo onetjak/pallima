@@ -5,7 +5,7 @@
 <section class="content">
         <div class="container-fluid">
             <div class="block-header">
-                <h2>POST</h2>
+                <h2>POSTINGAN</h2>
             </div>
 
             <!-- Basic Examples -->
@@ -14,10 +14,10 @@
                     <div class="card">
                         <div class="header">
                             <h2>
-                                Berita dan Kegiatan
+                                Data Artikel
                             </h2>
                             <ul class="header-dropdown m-r--5">
-                                 <a class="btn btn-success" href="{{ route('post.create')}}" style="margin-bottom: 10px">+ Post</a>
+                                 <a class="btn btn-success" href="{{ route('post.create')}}" style="margin-bottom: 10px">+ Artikel</a>
                             </ul>
                         </div>
                         <div class="body">
@@ -29,7 +29,7 @@
                                             <th>Cover</th>
                                             <th>Judul</th>
                                             <th>Kategori</th>
-                                            <th>Tanggal Publish</th>
+                                            <th>Tanggal Publis</th>
                                             <th>Aksi</th>
                                         </tr>
                                     </thead>
@@ -45,52 +45,38 @@
                                                 <div class="btn-group">
 
                                                  <a class="btn btn-primary waves-effect" href="{{ route('post.edit' , $post->id) }}"><i class="material-icons">border_color</i> </a>
-                                            </th>
-                                     @empty
-                                        <tr>
-                                            <td colspan="6" >Data Nihil </td>
-                                        </tr>
+                                                 <a class="btn btn-danger waves-effect" data-toggle="modal" href='#modal-delete{{$post->id}}'><i class="material-icons">delete_sweep</i></a>
 
-                                     @endforelse
-
-                                    {{-- @foreach($bantuan as $b)
-                                    <tbody>
-                                         <tr>
-                                            <th>{{ $loop->iteration }}</th>
-                                            <th>{{ $b->nama }}</th>
-                                            <th>{{ $b->jumlah }}</th>
-                                            <th>
-                                                <div class="btn-group">
-
-                                                 <a class="btn btn-primary waves-effect" href="{{ route('bantuan.edit' , $b->id) }}"><i class="material-icons">border_color</i> </a>
-                                                 <a class="btn btn-danger waves-effect" data-toggle="modal" href='#modal-delete{{$b->nama}}'><i class="material-icons">delete_sweep</i></a>
-
-                                                 <div class="modal fade" id="modal-delete{{$b->nama}}">
+                                                 <div class="modal fade" id="modal-delete{{$post->id}}">
                                                     <div class="modal-dialog">
                                                         <div class="modal-content">
                                                             <div class="modal-header">
                                                                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                                                                <h4 class="modal-title">Hapus Bantuan</h4>
+                                                                <h4 class="modal-title">Hapus Artike</h4>
                                                             </div>
                                                                                                                         <div class="modal-body">
-                                                                Apakah anda yakin ingin menghapus bantuan dengan NIK {{$b->nama}} ?
+                                                                Apakah anda yakin ingin menghapus artikel dengan judul {{$post->judul}} ?
                                                             </div>
                                                             <div class="modal-footer">
                                                                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
 
-                                                                <a href="{{ url('/bantuan/hapus' , $b->id) }}"class="btn btn-danger">Hapus</a>
+                                                                <a href="{{ url('/post/hapus' , $post->id) }}"class="btn btn-danger">Hapus</a>
                                                             </div>
 
 
                                                         </div>
                                                     </div>
                                                  </div>
-
                                                 </div>
+
                                             </th>
-                                            </tr>
-                                    </tbody>
-                                    @endforeach --}}
+                                     @empty
+                                        <tr>
+                                            <td colspan="6" >Data Kosong </td>
+                                        </tr>
+
+                                     @endforelse
+
                                 </table>
                             </div>
                         </div>

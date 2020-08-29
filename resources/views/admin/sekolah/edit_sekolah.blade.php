@@ -20,35 +20,46 @@
                                 @csrf
                                 <div class="form-group form-float">
                                     <div class="form-line">
+                                        <input type="text" class="form-control" name="nama" value="{{ $sekolah->npsn }}" maxlength="100" minlength="3" required>
+                                        <label class="form-label">NPSN</label>
+                                    </div>
+                                    <div class="help-info">Sesuai Data Kementerian Pendidikan & Budaya</div>
+                                </div>
+                                <div class="form-group form-float">
+                                    <div class="form-line">
                                         <input type="text" class="form-control" name="nama" value="{{ $sekolah->nama }}" maxlength="100" minlength="3" required>
                                         <label class="form-label">Nama</label>
                                     </div>
-                                    <div class="help-info">Sesuai Akta dan KK</div>
                                 </div>
                                 <div class="form-group form-float">
                                     <div class="form-line">
                                         <input type="text" class="form-control" name="ketua" value="{{ $sekolah->ketua }}" maxlength="100" minlength="3" required>
-                                        <label class="form-label">Nama</label>
+                                        <label class="form-label">Kepala Sekolah/Pimpinan</label>
                                     </div>
-                                    <div class="help-info">Sesuai Akta dan KK</div>
                                 </div>
                                 <div class="form-group form-float">
                                     <div class="form-line">
                                         <input type="text" class="form-control" name="alamat" value="{{ $sekolah->alamat }}" maxlength="100" minlength="3" required>
                                         <label class="form-label">Alamat</label>
                                     </div>
-                                    <div class="help-info">Sesuai KTP</div>
                                 </div>
                                 <div class="form-group form-float">
                                     <div class="form-line">
                                         <br>
-                                        <select name="kategori" class="form-control show-tick">
-                                            <option> -- Pilih Kategori --</option>
-                                            <option value="sd"> SD </option>
+                                        <select name="kategori" value="{{ $sekolah->kategori }}" class="form-control show-tick">
+                                            <option > -- Pilih Kategori --</option>
+                                            @if ($sekolah->kategori  == 'sd')
+                                            <option selected value="sd"> SD </option>
                                             <option value="smp">SMP</option>
                                             <option value="sma">SMA</option>
+                                            @else
+                                            <option value="sd"> SD </option>
+                                            <option selected value="smp">SMP</option>
+                                            <option selected value="sma">SMA</option>
+
+                                            @endif
                                         </select>
-                                        <label class="form-label">Kategori </label>
+                                        <label class="form-label">Level </label>
                                     </div>
                                 </div>
 

@@ -5,7 +5,7 @@
 <section class="content">
         <div class="container-fluid">
             <div class="block-header">
-                <h2>SEKOLAH</h2>
+                <h2>PENGURUS</h2>
             </div>
 
             <!-- Advanced Validation -->
@@ -13,7 +13,7 @@
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <div class="card">
                         <div class="header">
-                            <h2>Penambahan Data</h2>
+                            <h2>Penambahan Data Pengurus</h2>
                         </div>
                         <div class="body">
                             <form id="form_advanced_validation" action="{{ route('pengurus.store') }}" method="POST">
@@ -35,6 +35,7 @@
                                         <input type="text" class="form-control" name="jabatan" maxlength="100" minlength="3" required>
                                         <label class="form-label">Jabatan</label>
                                     </div>
+                                    <div class="help-info">Contoh: Rt01/Rw02 atau Rw</div>
                                 </div>
                                 <div class="form-group form-float">
                                     <div class="form-line">
@@ -73,13 +74,13 @@
                                 <div class="form-group form-float">
                                     <div class="form-line">
                                         <input type="text" class="form-control" name="sk" maxlength="100" minlength="3" required>
-                                        <label class="form-label">SK</label>
+                                        <label class="form-label">Nomor SK</label>
                                     </div>
                                 </div>
                                 <div class="form-group form-float">
                                     <div class="form-line">
                                         <input type="text" class="form-control" name="tanggal" maxlength="100" minlength="3" required>
-                                        <label class="form-label">Tanggal</label>
+                                        <label class="form-label">Tanggal SK</label>
                                     </div>
                                 </div>
                                 <button class="btn btn-primary waves-effect" type="submit">SIMPAN</button>

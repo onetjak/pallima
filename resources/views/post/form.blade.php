@@ -5,7 +5,7 @@
 <section class="content">
         <div class="container-fluid">
             <div class="block-header">
-                <h2>POST</h2>
+                <h2>POSTINGAN</h2>
             </div>
 
             <!-- Advanced Validation -->
@@ -14,9 +14,9 @@
                     <div class="card">
                         <div class="header">
                             @if (isset($post))
-                                <h2>Edit Data</h2>
+                                <h2>Edit Artikel</h2>
                             @else
-                                <h2>Penambahan Data</h2>
+                                <h2>Tambah Artikel</h2>
                             @endif
                         </div>
                         <div class="body">
@@ -37,7 +37,7 @@
                                 <div class="form-group form-float">
                                     <div class="form-line">
                                         <input type="text" class="form-control" name="deskripsi" id="deskripsi" value="{{ isset($post) ? $post->deskripsi : old('deskripsi') }}" maxlength="100" minlength="3" required>
-                                        <label class="form-label">Deskripsi</label>
+                                        <label class="form-label">Penulis</label>
                                   </div>
                                 </div>
                                 <div class="form-group form-float">

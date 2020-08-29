@@ -5,7 +5,7 @@
 <section class="content">
         <div class="container-fluid">
             <div class="block-header">
-                <h2>BANTUAN</h2>
+                <h2>KATEGORI</h2>
             </div>
 
             <!-- Advanced Validation -->
@@ -13,7 +13,7 @@
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <div class="card">
                         <div class="header">
-                            <h2>Penambahan Data</h2>
+                            <h2>Penambahan Kategori</h2>
                         </div>
                         <div class="body">
                             <form id="form_advanced_validation" action="{{ route('kategori.store') }}" method="POST">
@@ -23,7 +23,6 @@
                                         <input type="text" class="form-control" name="name" maxlength="100" minlength="3" required>
                                         <label class="form-label">Nama</label>
                                     </div>
-                                    <div class="help-info">Sesuai Akta dan KK</div>
                                 </div>
                                 <button class="btn btn-primary waves-effect" type="submit">SIMPAN</button>
                                 <button class="btn btn-danger waves-effect" type="reset">RESET</button>

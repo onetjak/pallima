@@ -13,7 +13,7 @@
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <div class="card">
                         <div class="header">
-                            <h2>Penambahan Data</h2>
+                            <h2>Penambahan Data Sekolah</h2>
                         </div>
                         <div class="body">
                             <form id="form_advanced_validation" action="{{ route('sekolah.store') }}" method="POST">
@@ -23,7 +23,7 @@
                                         <input type="number" class="form-control" name="npsn" required>
                                         <label class="form-label">NPSN</label>
                                     </div>
-                                    <div class="help-info">Sesuai Kemendikbud</div>
+                                    <div class="help-info">Sesuai Data Kementerian Pendidikan & Budaya</div>
                                 </div>
                                 <div class="form-group form-float">
                                     <div class="form-line">

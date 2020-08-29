@@ -43,9 +43,9 @@
                                             <th><img src="{{ asset('upload/foto/'.$b->foto)}}" alt="" width="100px"></th>
                                             <th>
                                                 <div class="btn-group">
-                                                 <a class="btn btn-danger waves-effect" data-toggle="modal" href='#modal-delete{{$b->nama}}'><i class="material-icons">delete_sweep</i></a>
+                                                 <a class="btn btn-danger waves-effect" data-toggle="modal" href='#modal-delete{{$b->id}}'><i class="material-icons">delete_sweep</i></a>
 
-                                                 <div class="modal fade" id="modal-delete{{$b->nama}}">
+                                                 <div class="modal fade" id="modal-delete{{$b->id}}">
                                                     <div class="modal-dialog">
                                                         <div class="modal-content">
                                                             <div class="modal-header">

@@ -14,10 +14,10 @@
                     <div class="card">
                         <div class="header">
                             <h2>
-                                Data Sekolah
+                                Data Pengurus Rw
                             </h2>
                             <ul class="header-dropdown m-r--5">
-                                 <a class="btn btn-success" href="{{url('/form_pengurus')}}" style="margin-bottom: 10px">+ Data</a>
+                                 <a class="btn btn-success" href="{{url('/form_pengurus')}}" style="margin-bottom: 10px">+ Data Pengurus</a>
                             </ul>
                         </div>
                         <div class="body">
@@ -58,17 +58,17 @@
 
                                                  <a class="btn btn-primary waves-effect" href="{{ route('pengurus.edit_pengurus' , $b->id)}}"><i class="material-icons">border_color</i> </a>
 
-                                                 <a class="btn btn-danger waves-effect" data-toggle="modal" href='#modal-delete{{$b->no_hp}}'><i class="material-icons">delete_sweep</i></a>
+                                                 <a class="btn btn-danger waves-effect" data-toggle="modal" href='#modal-delete{{$b->id}}'><i class="material-icons">delete_sweep</i></a>
 
-                                                 <div class="modal fade" id="modal-delete{{$b->no_hp}}">
+                                                 <div class="modal fade" id="modal-delete{{$b->id}}">
                                                     <div class="modal-dialog">
                                                         <div class="modal-content">
                                                             <div class="modal-header">
                                                                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                                                                <h4 class="modal-title">Hapus Data Sekolah</h4>
+                                                                <h4 class="modal-title">Hapus Data Pengurus</h4>
                                                             </div>
                                                                                                                         <div class="modal-body">
-                                                                Apakah anda yakin ingin menghapus data Sekolah {{$b->no_hp}} ?
+                                                                Apakah anda yakin ingin menghapus data Pengurus bernama {{$b->no_hp}} ?
                                                             </div>
                                                             <div class="modal-footer">
                                                                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>

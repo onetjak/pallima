@@ -18,6 +18,8 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::get('/berita', 'PostController@ApiBerita');
+Route::get('/profil', 'ProfilController@ApiProfil');
+Route::get('/pelayanan', 'PelayananController@ApiPelayanan');
 Route::get('/bantuan', 'BantuanController@ApiBantuan');
 Route::get('/pengurus', 'PengurusController@ApiPengurus');
 Route::get('/ibadah', 'IbadahController@ApiIbadah');

@@ -26,6 +26,7 @@ class IbadahController extends Controller
             // Storage::putFileAs('public/foto', $foto, $request->foto);
         }
         $simpan = Ibadah::create([
+            'nama' => $request->nama,
             'ketua' => $request->ketua,
             'alamat' => $request->alamat,
             'foto' => $namafile

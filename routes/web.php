@@ -20,6 +20,9 @@ Auth::routes();
 Route::get('/logout', 'HomeController@logout');
 
 Route::resource('/post', 'PostController');
+Route::get('/post/hapus/{id}', 'PostController@hapus');
+
+Route::resource('/profil', 'ProfilController');
 
 Route::get('/dashboard', 'HomeController@index')->name('dashboard');
 
@@ -113,4 +116,14 @@ Route::get('/kategori/hapus/{id}', 'KategoriController@hapus');
 
 Route::get('/form_kategori', function () {
     return view('/kategori.form');
+});
+
+Route::get('/pelayanan', 'PelayananController@index')->name('pelayanan.index');
+Route::post('/pelayanan/store', 'PelayananController@store')->name('pelayanan.store');
+Route::get('/pelayanan/edit/{id}', 'PelayananController@edit')->name('pelayanan.edit');
+Route::post('/pelayanan/update/{id}', 'PelayananController@update')->name('pelayanan.update');
+Route::get('/pelayanan/hapus/{id}', 'PelayananController@hapus');
+
+Route::get('/form_pelayanan', function () {
+    return view('admin/pelayanan.form');
 });

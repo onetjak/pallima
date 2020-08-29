@@ -14,10 +14,10 @@
                     <div class="card">
                         <div class="header">
                             <h2>
-                                Data Sekolah
+                                Data Sekolah SMP
                             </h2>
                             <ul class="header-dropdown m-r--5">
-                                 <a class="btn btn-success" href="{{url('/form_sekolah')}}" style="margin-bottom: 10px">+ Lokasi</a>
+                                 <a class="btn btn-success" href="{{url('/form_sekolah')}}" style="margin-bottom: 10px">+ Data Sekolah</a>
                             </ul>
                         </div>
                         <div class="body">
@@ -48,9 +48,9 @@
 
                                                  <a class="btn btn-primary waves-effect" href="{{ route('sekolah.edit_sekolah' , $b->id)}}"><i class="material-icons">border_color</i> </a>
 
-                                                 <a class="btn btn-danger waves-effect" data-toggle="modal" href='#modal-delete{{$b->npsn}}'><i class="material-icons">delete_sweep</i></a>
+                                                 <a class="btn btn-danger waves-effect" data-toggle="modal" href='#modal-delete{{$b->id}}'><i class="material-icons">delete_sweep</i></a>
 
-                                                 <div class="modal fade" id="modal-delete{{$b->npsn}}">
+                                                 <div class="modal fade" id="modal-delete{{$b->id}}">
                                                     <div class="modal-dialog">
                                                         <div class="modal-content">
                                                             <div class="modal-header">

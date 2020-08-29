@@ -15,6 +15,7 @@ class CreateIbadahTable extends Migration
     {
         Schema::create('ibadah', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('nama');
             $table->string('ketua');
             $table->string('alamat');
             $table->string('foto');

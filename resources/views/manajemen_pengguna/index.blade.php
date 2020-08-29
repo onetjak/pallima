@@ -5,7 +5,7 @@
 <section class="content">
         <div class="container-fluid">
             <div class="block-header">
-                <h2>BANTUAN</h2>
+                <h2>PENGGUNA</h2>
             </div>
 
             <!-- Basic Examples -->
@@ -14,10 +14,10 @@
                     <div class="card">
                         <div class="header">
                             <h2>
-                                Penerima Bantuan Beras dan PKH
+                                Manajemen Pengguna Website
                             </h2>
                             <ul class="header-dropdown m-r--5">
-                                 <a class="btn btn-success" href="{{url('/form')}}" style="margin-bottom: 10px">+ Penerima</a>
+                                 <a class="btn btn-success" href="{{url('/form')}}" style="margin-bottom: 10px">+ Pengguna</a>
                             </ul>
                         </div>
                         <div class="body">
@@ -43,17 +43,17 @@
                                                 <div class="btn-group">
 
                                                  <a class="btn btn-primary waves-effect" href="{{ route('manajemen_pengguna.edit' , $b->id) }}"><i class="material-icons">border_color</i> </a>
-                                                 <a class="btn btn-danger waves-effect" data-toggle="modal" href='#modal-delete{{$b->nama}}'><i class="material-icons">delete_sweep</i></a>
+                                                 <a class="btn btn-danger waves-effect" data-toggle="modal" href='#modal-delete{{$b->id}}'><i class="material-icons">delete_sweep</i></a>
 
-                                                 <div class="modal fade" id="modal-delete{{$b->nama}}">
+                                                 <div class="modal fade" id="modal-delete{{$b->id}}">
                                                     <div class="modal-dialog">
                                                         <div class="modal-content">
                                                             <div class="modal-header">
                                                                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                                                                <h4 class="modal-title">Hapus Bantuan</h4>
+                                                                <h4 class="modal-title">Hapus Pengguna</h4>
                                                             </div>
                                                                                                                         <div class="modal-body">
-                                                                Apakah anda yakin ingin menghapus bantuan dengan NIK {{$b->nama}} ?
+                                                                Apakah anda yakin ingin menghapus pengguna bernama {{$b->name}} ?
                                                             </div>
                                                             <div class="modal-footer">
                                                                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>

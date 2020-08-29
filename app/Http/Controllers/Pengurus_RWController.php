@@ -17,7 +17,7 @@ class Pengurus_RWController extends Controller
     {
         $simpan = Pengurus::create($request->all());
         if ($simpan == true) {
-            return redirect()->route('pengurus.index');
+            return redirect()->route('pengurus_rw.index');
         }
     }
 

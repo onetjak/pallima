@@ -20,6 +20,12 @@
                                 @csrf
                                 <div class="form-group form-float">
                                     <div class="form-line">
+                                        <input type="text" class="form-control" name="nama" maxlength="100" minlength="3" required>
+                                        <label class="form-label">Nama</label>
+                                    </div>
+                                </div>
+                                <div class="form-group form-float">
+                                    <div class="form-line">
                                         <input type="text" class="form-control" name="ketua" maxlength="100" minlength="3" required>
                                         <label class="form-label">Ketua</label>
                                     </div>
