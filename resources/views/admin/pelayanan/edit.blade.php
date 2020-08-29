@@ -27,7 +27,7 @@
                                 <div class="form-group form-float">
                                     <div class="form-line">
                                         <label for="syarat">Persyaratan</label>
-                                        <textarea id="editor"  name="syarat" class="form-control" value="{{ $pelayanan->syarat }}"></textarea>
+                                        <textarea id="editor"  name="syarat" class="form-control" value="{{ $pelayanan->syarat }}">{{ $pelayanan->syarat }}</textarea>
                                     </div>
                                 </div>
                                 <button class="btn btn-primary waves-effect" type="submit">SIMPAN</button>
